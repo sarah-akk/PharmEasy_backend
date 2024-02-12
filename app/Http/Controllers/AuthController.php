@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Validator;
 use function Laravel\Prompts\password;
 
 class AuthController extends Controller
+
 { public function register_user (Request $request){
 
     $RegisterData = $request->validate([
@@ -96,10 +97,5 @@ if (!Auth::attempt($request->only(['phone', 'password']))) {
                'data'=>$token,
                'message' => 'welcome.']);}
    }
-
-
-
-
-
-         }
+}
 
